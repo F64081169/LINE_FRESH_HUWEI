@@ -23,4 +23,20 @@
     <a href="#" title="page2.html"><img src="https://thumbs.dreamstime.com/b/shopping-voucher-vector-icon-discount-ticket-illustration-sign-coupon-symbol-shopping-voucher-vector-icon-discount-ticket-177802851.jpg" alt="測試圖片" width="100" height="100"border="0"></a>
     </div>
 </body>
+
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script>
+        liff.init(
+            data => {
+                //you can call LIFF API
+                liff.getProfile().then(profile =>{
+                    //拿取profile
+                    document.getElementById('displayName').innerHTML = profile.displayName
+                })
+            },
+            err => {
+                //LIFF initialization failed
+            }
+        )
+    </script>
 </html>
